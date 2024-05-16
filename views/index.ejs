@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-400 min-h-screen">
+    <nav class="bg-gray-100 px-20 py-5 text-blue-900 flex gap-8 text-base font-medium">
+        <a href="/" class="hover:text-blue-700">Home</a>
+        <a href="/create" class="hover:text-blue-700">Create File</a>
+    </nav>
+    <div class="container mx-auto p-8">
+        <h1 class="text-2xl font-bold text-black mb-4">All Files</h1>
+        <div class="flex flex-wrap gap-6">
+               <% files.forEach(File => { %>
+               <div class="w-72 min-h-64 bg-white rounded-lg shadow-md p-4">
+                   <h2 class="text-2xl font-medium mb-2"><%= File.filename %></h2>
+                   <p class="text-base"><%= File.data %></p>
+               </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
+

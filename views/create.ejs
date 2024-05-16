@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create File</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-400 min-h-screen">
+    <nav class="bg-gray-100 px-20 py-5 text-blue-900 flex gap-8 text-base font-medium">
+        <a href="/" class="hover:text-blue-700">Home</a>
+        <a href="/create" class="hover:text-blue-700">Create File</a>
+    </nav>
+    <h1 class="text-2xl mx-10 p-8 font-bold text-black mb-4">Create File</h1>
+    
+    <form class="w-2/5 mx-10 p-1 flex flex-col gap-4" action="/create" method="post">
+        <input class="py-2 px-3 rounded-lg outline-none" type="text" placeholder="Filename" name="filename" required>
+        <textarea class="py-2 px-3 rounded-lg outline-none resize-none" placeholder="Filedata" name="filedata" rows="3" required></textarea>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-lg font-medium" type="submit">Create</button>
+    </form>
+    
+</body>
+</html>
